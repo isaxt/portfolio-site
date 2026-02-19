@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isabella Tedesco</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="site">
+  <!-- Sidebar -->
+  <aside>
+    <div class="logo">
+      <a href="#">
+        <h1>Isabella <br> Tedesco</h1>
+        <p>Frontend Designer & HCI Researcher</p>
+        <p>AI/ML x Design Systems</p>
+      </a>
+    </div>
+
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <span class="copyright">© 2026 Isabella Tedesco</span>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h2 class="greeting fade-up">Hi, I'm <em>Isa!</em></h2>
+        <p class="bio fade-up">I'm a UX designer crafting thoughtful digital experiences.</p>
+        <div class="cta-row fade-up">
+          <a href="#work" class="btn btn-accent">View Work</a>
+          <a href="#about" class="btn">About Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=900&q=80"
+          alt="Featured work"
+          onload="this.classList.add('loaded')"
+        >
+        <span class="image-caption">Featured Project, 2025</span>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="work" id="work">
+      <p class="section-label">Selected Work</p>
+      <div class="projects">
+        <!-- project cards unchanged -->
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <!-- unchanged -->
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="footer-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">Dribbble</a>
+        <a href="#">Resume</a>
+        <a href="#">Email</a>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<!-- Scroll hint -->
+<div class="scroll-hint" id="scrollHint">
+  <span>Scroll</span>
+  <div class="line"></div>
+</div>
+
+<!-- External JS -->
+<script src="script.js"></script>
+</body>
+</html>
