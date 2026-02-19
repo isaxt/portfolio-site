@@ -250,7 +250,7 @@ a.project-card {
     background: #e8e2d9;
     cursor: pointer;
     /* flex: 0 0 340px;      fixed card width — tweak to taste */
-    height: 400px;         /* fixed card height */
+    height: 350px;         /* fixed card height */
     scroll-snap-align: start;
 }
 
