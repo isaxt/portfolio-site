@@ -224,18 +224,34 @@ footer {
     margin-bottom: 48px;
 }
 
+/* ── Work ── */
 .projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 16px; /* room for scrollbar */
+    cursor: grab;
 }
 
-.project-card {
+/* Hide scrollbar visually but keep it functional */
+.projects::-webkit-scrollbar { height: 3px; }
+.projects::-webkit-scrollbar-track { background: transparent; }
+.projects::-webkit-scrollbar-thumb { background: var(--border); }
+
+.projects:active { cursor: grabbing; }
+
+a.project-card {
+    display: block;
+    text-decoration: none;
     position: relative;
     overflow: hidden;
     background: #e8e2d9;
     cursor: pointer;
-    aspect-ratio: 4/3;
+    /* flex: 0 0 340px;      fixed card width — tweak to taste */
+    height: 400px;         /* fixed card height */
+    scroll-snap-align: start;
 }
 
 .project-card::after {
