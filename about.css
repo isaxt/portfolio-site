@@ -1,0 +1,86 @@
+/* ── About Page ── */
+
+/* Full-page section with generous top padding */
+.about-page {
+    padding: 100px 64px;
+    min-height: calc(100vh - 120px); /* breathe without forcing scroll */
+}
+
+/* Header block */
+.about-header {
+    margin-bottom: 72px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 48px;
+}
+
+.about-title {
+    font-size: clamp(3rem, 5vw, 5.2rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-top: 20px;
+    color: var(--ink);
+}
+
+.about-title em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+/* Two-column body: prose left, details right */
+.about-body {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* Prose column */
+.about-prose p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #5a5450;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.about-prose p:last-child {
+    margin-bottom: 0;
+}
+
+.about-prose em {
+    font-style: italic;
+    color: var(--ink);
+}
+
+.text-link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: opacity 0.2s;
+}
+
+.text-link:hover {
+    opacity: 0.65;
+}
+
+/* Details sidebar column — reuses .detail-row, .detail-label, .detail-value from styles.css */
+.about-details {
+    border-top: 1px solid var(--border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .about-page {
+        padding: 60px 32px;
+    }
+
+    .about-body {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .about-title {
+        font-size: clamp(2.4rem, 8vw, 3.6rem);
+    }
+}
