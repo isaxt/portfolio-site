@@ -454,14 +454,22 @@ footer {
         margin-left: 0;
     }
 
-    .hero {
-        grid-template-columns: 1fr;
-    }
-
     .hero-image {
-        height: 50vw;
-        min-height: 260px;
-    }
+  padding: 40px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+  max-height: 70vh;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
 
     .hero-text {
         padding: 60px 32px;
@@ -485,4 +493,32 @@ footer {
     .copyright {
         display: none;
     }
+}
+/* ── Larger text overrides ── */
+html {
+  font-size: 18px; /* bumps the base up from 16px */
+}
+
+.greeting {
+  font-size: 3.2rem;
+}
+
+.bio {
+  font-size: 1.4rem;
+}
+
+nav a {
+  font-size: 1.1rem;
+}
+
+.logo p {
+  font-size: 1rem;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+}
+
+.project-info h3 {
+  font-size: 1.6rem;
 }

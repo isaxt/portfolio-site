@@ -1,9 +1,7 @@
-// Hide scroll hint on scroll
 window.addEventListener('scroll', () => {
   document.getElementById('scrollHint').style.opacity = 0;
 }, { passive: true, once: true });
 
-// Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
@@ -14,7 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Active nav highlight
 const sections = document.querySelectorAll('section[id], footer[id]');
 const navLinks = document.querySelectorAll('nav a');
 
