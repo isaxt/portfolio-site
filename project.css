@@ -1,0 +1,226 @@
+/* ── Project Page Shared Styles ── */
+
+.project-page {
+    padding: 100px 80px 100px 64px;
+    min-height: 100vh;
+}
+
+/* Header */
+.project-header {
+    margin-bottom: 80px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--muted);
+}
+
+.project-title {
+    font-size: clamp(3rem, 5vw, 5.6rem);
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 28px;
+}
+
+.project-title em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.project-tagline {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #5a5450;
+    max-width: 560px;
+    line-height: 1.65;
+}
+
+/* Meta row */
+.project-meta {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.meta-label {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.meta-value {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--ink);
+}
+
+/* Hero image */
+.project-hero-img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 80px;
+    background: var(--cream);
+}
+
+/* Body layout */
+.project-body {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+.project-prose p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #5a5450;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.project-prose p:last-child { margin-bottom: 0; }
+
+.project-prose em {
+    font-style: italic;
+    color: var(--ink);
+}
+
+.project-prose h3 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 16px;
+    margin-top: 48px;
+    color: var(--ink);
+}
+
+.project-sidebar {
+    border-top: 1px solid var(--border);
+}
+
+/* Image grid */
+.project-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 80px;
+}
+
+.project-images img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    background: var(--cream);
+}
+
+.project-images .img-full {
+    grid-column: 1 / -1;
+    height: 420px;
+}
+
+/* Nav between projects */
+.project-nav {
+    border-top: 1px solid var(--border);
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-nav a {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-nav a:hover { color: var(--ink); }
+
+.project-nav .next { flex-direction: row-reverse; }
+
+.project-nav span { font-size: 1rem; }
+
+/* Accent block */
+.callout {
+    background: var(--cream);
+    border-left: 3px solid var(--accent);
+    padding: 28px 36px;
+    margin: 40px 0;
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+/* Hero video */
+.project-hero-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 80px;
+    background: #000;
+}
+
+.project-hero-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 900px) {
+    .project-page {
+        padding: 60px 32px;
+    }
+    .project-body {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .project-images {
+        grid-template-columns: 1fr;
+    }
+    .project-images .img-full {
+        grid-column: 1;
+    }
+    .project-title {
+        font-size: clamp(2.6rem, 8vw, 3.6rem);
+    }
+}
