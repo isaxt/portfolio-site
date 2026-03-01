@@ -226,32 +226,18 @@ footer {
 
 /* ── Work ── */
 .projects {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 16px; /* room for scrollbar */
-    cursor: grab;
 }
-
-/* Hide scrollbar visually but keep it functional */
-.projects::-webkit-scrollbar { height: 3px; }
-.projects::-webkit-scrollbar-track { background: transparent; }
-.projects::-webkit-scrollbar-thumb { background: var(--border); }
-
-.projects:active { cursor: grabbing; }
 
 a.project-card {
     display: block;
     text-decoration: none;
     position: relative;
     overflow: hidden;
-    /* background: #e8e2d9; */
     cursor: pointer;
-    /* flex: 0 0 340px;      fixed card width — tweak to taste */
-    height: 400px;         /* fixed card height */
-    scroll-snap-align: start;
+    height: 400px;
 }
 
 .project-card::after {
@@ -421,6 +407,12 @@ footer {
 }
 
 /* ── Responsive ── */
+@media (max-width: 1200px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 900px) {
     .site {
         grid-template-columns: 1fr;
@@ -454,7 +446,7 @@ footer {
     }
 
     .about {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 40px;
     }
 
@@ -464,5 +456,10 @@ footer {
 
     .copyright {
         display: none;
+    }
+}
+@media (max-width: 560px) {
+    .projects {
+        grid-template-columns: 1fr;
     }
 }
