@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overcast – Isabella Tedesco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<div class="site">
+  <aside>
+    <div class="logo">
+      <a href="index.html">
+        <h1>Isabella <br> Tedesco</h1>
+        <p>Frontend Designer & HCI Researcher</p>
+        <p>AI/ML x Design Systems</p>
+      </a>
+    </div>
+    <nav>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#work" class="active">Work</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <span class="copyright">© 2026 Isabella Tedesco</span>
+  </aside>
+
+  <main>
+    <section class="project-page">
+
+      <!-- Header -->
+      <div class="project-header fade-up">
+        <p class="project-label">Web Development — Personal Archive & Photography</p>
+        <h1 class="project-title">overcast.exe</h1>
+        <p class="project-tagline">A small React site for exploring collections of cloud photographs captured across different times of day in New York City — tracing the subtle moods and shifting atmospheres above the city.</p>
+
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Year</span>
+            <span class="meta-value">2025</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Role</span>
+            <span class="meta-value">Designer, Developer, Photographer</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">React, Vite, HTML, CSS, JavaScript</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Personal Web Project / Photo Archive</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero image -->
+      <img class="project-hero-img fade-up" src="projects/overcast.png" alt="NYC Cloud Archive interface" style="--i:1">
+
+      <!-- Body -->
+      <div class="project-body">
+
+        <div class="project-prose fade-up" style="--i:2">
+          <p>
+            New York City is famous for its skyline — but the sky itself is easy to overlook. This project started as a personal habit: looking up. Over time, those upward glances accumulated into a quiet archive of cloud photographs taken across the city at different hours of the day, across many days.
+          </p>
+          <p>
+            The site invites users to select from three time intervals — morning, afternoon, and evening — each revealing a curated series of cloud photos from that period. <em>The sky above the city shifts in mood far more than we tend to notice.</em> This project makes that shift legible, unhurried.
+          </p>
+
+          <blockquote class="callout">
+            "The background color and ASCII art change with each time interval — creating a subtle rhythm and personality for each moment across the days."
+          </blockquote>
+
+          <h3>Time as Structure</h3>
+          <p>
+            Rather than organizing photographs by date or location, the archive uses time of day as its primary axis. Morning, afternoon, and evening each carry a distinct quality of light and atmosphere — and the site's visual design responds to that. Background colors shift. ASCII art punctuates the transitions. The interface itself becomes a kind of clock.
+          </p>
+          <p>
+            This is a deliberately small project. There are no filters, no maps, no metadata overlays. Just clouds, time, and the city they drift over. <em>Simplicity as a design choice rather than a limitation.</em>
+          </p>
+
+          <h3>Building It</h3>
+          <p>
+            The site is built with React and Vite — a lightweight stack chosen to keep the focus on the photographs themselves. State management handles the time interval selection, dynamically swapping the image set, background palette, and ASCII art with each transition. The result is minimal in interface but alive in personality.
+          </p>
+        </div>
+
+        <aside class="project-sidebar fade-up" style="--i:3">
+          <div class="detail-row">
+            <span class="detail-label">Status</span>
+            <span class="detail-value">Completed</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Format</span>
+            <span class="detail-value">Web App — React / Vite</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Subject</span>
+            <span class="detail-value">New York City Skies</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Intervals</span>
+            <span class="detail-value">Morning, Afternoon, Evening</span>
+          </div>
+
+          <div class="skills" style="margin-top: 32px;">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vite</span>
+            <span class="skill-tag">HTML/CSS/JS</span>
+            <span class="skill-tag">Photography</span>
+            <span class="skill-tag">Personal Archive</span>
+            <span class="skill-tag">Interface Design</span>
+            <span class="skill-tag">ASCII Art</span>
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- Image grid -->
+      <div class="project-images fade-up" style="--i:4">
+        <img src="projects/overcast/morning.png" alt="Overcast — Morning interval view">
+        <img src="projects/overcast/afternoon.png" alt="Overcast — Afternoon interval view">
+        <img src="projects/overcast/evening.png" alt="Overcast — Evening interval view">
+      </div>
+
+      <!-- Links -->
+      <div class="project-links fade-up" style="--i:5; margin-bottom: 48px;">
+        <a href="https://isaxt.github.io/3101-assignment-3-clouds/" target="_blank" rel="noopener" class="btn btn-accent">View Live Site ↗</a>
+      </div>
+
+      <!-- Project nav -->
+      <nav class="project-nav fade-up" style="--i:6">
+        <a href="techne.html" class="prev"><span>←</span> Techne || Theos</a>
+        <a href="index.html#work" class="next">All Work <span>→</span></a>
+      </nav>
+
+    </section>
+
+    <footer id="contact">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/isabella-tedesco-2bb151284" target="_blank">LinkedIn</a>
+        <a href="mailto:isaxt.tedesco@gmail.com">Email</a>
+      </div>
+      <span class="footer-copy">© 2026 Isabella Tedesco</span>
+    </footer>
+  </main>
+</div>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
