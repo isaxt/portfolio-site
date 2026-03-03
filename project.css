@@ -139,7 +139,7 @@
 .project-images img {
     width: 100%;
     height: 320px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     background: var(--cream);
 }
@@ -254,7 +254,7 @@
 .gallery-grid img {
     width: auto;
     height: 260px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     background: var(--cream);
 }
