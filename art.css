@@ -54,6 +54,20 @@ transform:scale(1.02);
 
 }
 
+/* Series images displayed horizontally */
+
+.series {
+  display: flex;
+  gap: 10px;
+}
+
+.series img {
+  flex: 1;          /* ← each image takes equal share of row width */
+  width: 0;         /* ← override width:100% so flex controls sizing */
+  height: auto;
+  object-fit: cover;
+}
+
 
 /* Caption overlay */
 
