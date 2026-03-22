@@ -86,7 +86,7 @@
 .project-hero-img {
     width: 100%;
     height: 540px;
-    object-fit: cover;
+    object-fit: contain;  /* 👈 shows full image */
     display: block;
     margin-bottom: 80px;
     background: var(--cream);
