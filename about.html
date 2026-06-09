@@ -5,33 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About – Isabella Tedesco</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="about.css">
   <link rel="icon" type="image/png" href="photos/game_boy.png">
 </head>
 <body>
 
 <div class="site">
+
+  <!-- ── Sidebar ── -->
   <aside>
-    <div class="logo">
-      <a href="index.html">
-        <h1>Isabella <br> Tedesco</h1>
-        <p>Frontend Designer & HCI Researcher</p>
-        <p>AI/ML x Design Systems</p>
-      </a>
+    <div>
+      <div class="logo">
+        <a href="index.html">
+          <h1>Isabella <br>Tedesco</h1>
+          <p>Frontend Designer &amp; HCI Researcher</p>
+          <p>AI/ML x Design Systems</p>
+        </a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#work">Work</a>
+        <a href="art.html">Art</a>
+        <a href="about.html" class="active">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
     </div>
-    <nav>
-<a href="index.html">Home</a>
-<a href="index.html#work">Work</a>
-<a href="art.html" class="active">Art</a>
-<a href="about.html">About</a>
-<a href="index.html#contact">Contact</a>
-</nav>
     <span class="copyright">© 2026 Isabella Tedesco</span>
   </aside>
 
   <main>
+
     <section class="about-page">
 
       <!-- Header -->
@@ -54,7 +58,7 @@
             <a href="#" class="text-link">Society, Technology, and Management</a>.
           </p>
           <p>
-            My path to design wasn't linear. I was originally headed towards medicine, treating creative work as a hobby. But I couldn’t ignore the pull towards *making*. Creating is how I make sense of the world, and I had to follow it.
+            My path to design wasn't linear. I was originally headed towards medicine, treating creative work as a hobby. But I couldn't ignore the pull towards making. Creating is how I make sense of the world, and I had to follow it.
           </p>
           <p>
             Today, my work sits at the intersection of front-end web design, HCI research, and AI-informed design systems. I am interested in how interfaces are built and how they are experienced, the architecture underneath and the human on the other side. I approach design both as craft and inquiry: attentive about systems, curious about people, and committed to building things that are not only functional and beautiful, but genuinely useful.
@@ -62,9 +66,8 @@
           <p>
             I work across the full arc of a project, from early research and design strategy through implementation and interaction. I am drawn to the complexity of designing at scale, how a design system holds together across contexts, how AI shifts the conditions of creative and collaborative work, and how small interaction decisions accumulate into the feeling of a product.
           </p>
-
           <p>
-            My process tends to be hybrid by nature. I move between coding and conceptual work, prototyping and research, visual systems and written thinking. That range informs how I approach project management and cross-functional collaboration. I am comfortable in the space between disciplines, and I find that is often where the most interesting problems live. 
+            My process tends to be hybrid by nature. I move between coding and conceptual work, prototyping and research, visual systems and written thinking. That range informs how I approach project management and cross-functional collaboration. I am comfortable in the space between disciplines, and I find that is often where the most interesting problems live.
           </p>
         </div>
 
@@ -80,7 +83,7 @@
           </div>
           <div class="detail-row">
             <span class="detail-label">Major</span>
-            <span class="detail-value">Design & Technology</span>
+            <span class="detail-value">Design &amp; Technology</span>
           </div>
           <div class="detail-row">
             <span class="detail-label">Minors</span>
@@ -113,8 +116,10 @@
       </div>
       <span class="footer-copy">© 2026 Isabella Tedesco</span>
     </footer>
+
   </main>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>

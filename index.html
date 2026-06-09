@@ -5,47 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Isabella Tedesco</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="photos/game_boy.png">
 </head>
 <body>
 
 <div class="site">
+
+  <!-- ── Sidebar ── -->
   <aside>
-    <div class="logo">
-      <a href="#">
-        <h1>Isabella <br> Tedesco</h1>
-        <p>Frontend Designer & HCI Researcher</p>
-        <p>AI/ML x Design Systems</p>
-      </a>
+    <div>
+      <div class="logo">
+        <a href="#">
+          <h1>Isabella <br>Tedesco</h1>
+          <p>Frontend Designer &amp; HCI Researcher</p>
+          <p>AI/ML x Design Systems</p>
+        </a>
+      </div>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#work">Work</a>
+        <a href="art.html">Art</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <nav>
-  <a href="#home" class="active">Home</a>
-  <a href="#work">Work</a>
-  <a href="art.html">Art</a>
-  <a href="about.html">About</a>
-  <a href="#contact">Contact</a>
-</nav>
     <span class="copyright">© 2026 Isabella Tedesco</span>
   </aside>
 
   <main>
+
+    <!-- ── Hero ── -->
     <section class="hero" id="home">
       <div class="hero-intro">
         <h2 class="greeting fade-up">Hi, I'm <em>Isa!</em></h2>
-        <p class="bio fade-up">I'm a designer crafting thoughtful, digital experiences.</p>
+        <p class="bio fade-up" style="--i:1">I'm a designer crafting thoughtful, digital experiences.</p>
+        <div class="cta-row fade-up" style="--i:2">
+          <a href="#work" class="btn btn-accent">View Work</a>
+          <a href="about.html" class="btn">About Me</a>
+        </div>
       </div>
       <div class="hero-image">
-  <div class="image-wrapper">
-    <img src="photos/isa.jpg" alt="Isabella Tedesco">
-  </div>
-</div>
+        <div class="image-wrapper">
+          <img src="photos/isa.jpg" alt="Isabella Tedesco">
+        </div>
+      </div>
     </section>
 
+    <!-- ── Work ── -->
     <section class="work" id="work">
 
-      <!-- ── Digital Product Design ── -->
+      <!-- Digital Product Design -->
       <div class="work-category">
         <p class="section-label">Digital Product Design</p>
         <div class="projects">
@@ -62,7 +73,7 @@
             <img src="projects/unsubtle.png" alt="Unsubtle">
             <div class="project-info">
               <h3>Unsubtle</h3>
-              <p>Assistive Interaction — XR & AI</p>
+              <p>Assistive Interaction — XR &amp; AI</p>
             </div>
           </a>
 
@@ -93,16 +104,15 @@
         </div>
       </div>
 
-      <!-- ── Web Design / Interfaces ── -->
+      <!-- Web Design / Interfaces -->
       <div class="work-category">
         <p class="section-label">Web Design &amp; Interfaces</p>
         <div class="projects">
 
           <a href="adobeLab.html" class="project-card">
-            <img src="projects/adobeLab.png" alt="adobe post agi lab">
+            <img src="projects/adobeLab.png" alt="Adobe Post AGI Lab">
             <div class="project-info">
               <h3>Art, Culture and Meaning in a Post-GenAI World</h3>
-              <h4>Developed in Collaboration With Adobe</h4>
               <p>Speculative Web — Experimental Interfaces for Post-AI Creativity</p>
             </div>
           </a>
@@ -110,7 +120,7 @@
           <a href="finance.html" class="project-card">
             <img src="projects/finance.png" alt="Finance">
             <div class="project-info">
-              <h3>Finance and Cigarette Culture commentary</h3>
+              <h3>Finance and Cigarette Culture Commentary</h3>
               <p>Interface Design — Material Culture</p>
             </div>
           </a>
@@ -134,7 +144,7 @@
           <a href="posterArchive.html" class="project-card">
             <img src="projects/poster_archive.png" alt="poster">
             <div class="project-info">
-              <h3>PASTE - Poster Archive</h3>
+              <h3>PASTE — Poster Archive</h3>
               <p>Archive Interface — Graphic Culture</p>
             </div>
           </a>
@@ -142,7 +152,7 @@
         </div>
       </div>
 
-      <!-- ── Book Design ── -->
+      <!-- Book Design -->
       <div class="work-category">
         <p class="section-label">Book Design</p>
         <div class="projects">
@@ -150,7 +160,7 @@
           <a href="oldInternet.html" class="project-card">
             <img src="projects/old_internet.png" alt="old internet photo">
             <div class="project-info">
-              <h3>web archeology: a physical archive</h3>
+              <h3>Web Archeology: A Physical Archive</h3>
               <p>Book Design — Web History in Print</p>
             </div>
           </a>
@@ -158,7 +168,7 @@
           <a href="physicsBook.html" class="project-card">
             <img src="projects/physics_book.png" alt="physics book photo">
             <div class="project-info">
-              <h3>in theory + in practice: my relationship with physics</h3>
+              <h3>In Theory + In Practice: My Relationship with Physics</h3>
               <p>Book Design — Archival Work</p>
             </div>
           </a>
@@ -166,72 +176,72 @@
           <a href="antiAI.html" class="project-card">
             <img src="projects/anti_ai.png" alt="anti ai book photo">
             <div class="project-info">
-              <h3>anti-ai manifesto</h3>
-              <p>Book Design — AI archive</p>
+              <h3>Anti-AI Manifesto</h3>
+              <p>Book Design — AI Archive</p>
             </div>
           </a>
 
         </div>
       </div>
 
-      <!-- ── Installations / Interactive Media ── -->
-<div class="work-category">
-  <p class="section-label">Installations &amp; Interactive Media</p>
-  <div class="projects">
+      <!-- Installations / Interactive Media -->
+      <div class="work-category">
+        <p class="section-label">Installations &amp; Interactive Media</p>
+        <div class="projects">
 
-    <a href="textileTouch.html" class="project-card">
-      <img src="projects/textileTouch.png" alt="Installation 1">
-      <div class="project-info">
-        <h3>the grounding of touch + digital connection</h3>
-        <p>Physical Installation — Sensor-Based</p>
+          <a href="textileTouch.html" class="project-card">
+            <img src="projects/textileTouch.png" alt="Installation 1">
+            <div class="project-info">
+              <h3>The Grounding of Touch + Digital Connection</h3>
+              <p>Physical Installation — Sensor-Based</p>
+            </div>
+          </a>
+
+          <a href="bitPieces.html" class="project-card">
+            <img src="projects/bit_pieces.png" alt="Installation 2">
+            <div class="project-info">
+              <h3>Bits and Pieces</h3>
+              <p>Interactive Installation — Touchdesigner</p>
+            </div>
+          </a>
+
+          <a href="fightingRobots.html" class="project-card">
+            <img src="projects/fighting_robots.png" alt="Installation 2">
+            <div class="project-info">
+              <h3>Untitled</h3>
+              <p>Robotic Installation — AI Ethics &amp; Game Theory</p>
+            </div>
+          </a>
+
+          <a href="objectDystopia.html" class="project-card">
+            <img src="projects/objectDystopia.png" alt="Installation 3">
+            <div class="project-info">
+              <h3>Tender Evidence</h3>
+              <p>Soft Sculpture — Arduino &amp; Processing</p>
+            </div>
+          </a>
+
+          <a href="internetMax.html" class="project-card">
+            <img src="projects/internet_max.png" alt="Installation 3">
+            <div class="project-info">
+              <h3>Internet Maximalism</h3>
+              <p>Interactive Media — Arduino</p>
+            </div>
+          </a>
+
+        </div>
       </div>
-    </a>
-
-    <a href="bitPieces.html" class="project-card">
-      <img src="projects/bit_pieces.png" alt="Installation 2">
-      <div class="project-info">
-        <h3>bits and pieces</h3>
-        <p>Interactive Installation— Touchdesigner</p>
-      </div>
-    </a>
-
-    <a href="fightingRobots.html" class="project-card">
-      <img src="projects/fighting_robots.png" alt="Installation 2">
-      <div class="project-info">
-        <h3>untitled</h3>
-        <p>Robotic Installation — AI Ethics & Game Theory</p>
-      </div>
-    </a>
-
-    <a href="objectDystopia.html" class="project-card">
-      <img src="projects/objectDystopia.png" alt="Installation 3">
-      <div class="project-info">
-        <h3>tender evidence</h3>
-        <p>Soft Sculpture — Arduino & Processing</p>
-      </div>
-    </a>
-
-    <a href="internetMax.html" class="project-card">
-      <img src="projects/internet_max.png" alt="Installation 3">
-      <div class="project-info">
-        <h3>internet maximalism</h3>
-        <p>Interactive Media — Arduino</p>
-      </div>
-    </a>
-
-  </div>
-</div>
 
     </section>
-
-    <section class="about" id="about"></section>
 
     <footer id="contact">
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/isabella-tedesco-2bb151284" target="_blank">LinkedIn</a>
         <a href="mailto:isaxt.tedesco@gmail.com">Email</a>
       </div>
+      <span class="footer-copy">© 2026 Isabella Tedesco</span>
     </footer>
+
   </main>
 </div>
 

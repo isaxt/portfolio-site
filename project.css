@@ -1,11 +1,14 @@
-/* ── Project Page Shared Styles ── */
+/* ═══════════════════════════════════════════
+   Isabella Tedesco Portfolio — project.css
+   Shared styles for all project detail pages
+   ═══════════════════════════════════════════ */
 
-.project-page {
+   .project-page {
     padding: 100px 80px 100px 64px;
     min-height: 100vh;
 }
 
-/* Header */
+/* ── Header ── */
 .project-header {
     margin-bottom: 80px;
     padding-bottom: 56px;
@@ -13,8 +16,9 @@
 }
 
 .project-label {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 400;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
@@ -32,29 +36,33 @@
     background: var(--muted);
 }
 
+/* Project title: Cormorant Garamond Bold Italic, 36px */
 .project-title {
-    font-size: clamp(3rem, 5vw, 5.6rem);
-    font-weight: 300;
-    line-height: 1.0;
-    letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
     color: var(--ink);
     margin-bottom: 28px;
 }
 
 .project-title em {
     color: var(--accent);
-    font-style: italic;
 }
 
+/* Tagline: Fira Sans 18px */
 .project-tagline {
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: #5a5450;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--muted);
     max-width: 560px;
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
-/* Meta row */
+/* ── Meta row ── */
 .project-meta {
     display: flex;
     gap: 48px;
@@ -69,30 +77,32 @@
 }
 
 .meta-label {
-    font-family: var(--font-mono);
-    font-size: 0.58rem;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 400;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted);
 }
 
 .meta-value {
+    font-family: var(--font-body);
     font-size: 0.95rem;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--ink);
 }
 
-/* Hero image */
+/* ── Hero image ── */
 .project-hero-img {
     width: 100%;
     height: 540px;
-    object-fit: contain;  /* 👈 shows full image */
+    object-fit: contain;
     display: block;
     margin-bottom: 80px;
     background: var(--cream);
 }
 
-/* Body layout */
+/* ── Body layout ── */
 .project-body {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -101,9 +111,11 @@
     margin-bottom: 80px;
 }
 
+/* Prose: Fira Sans 18px */
 .project-prose p {
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
     color: #5a5450;
     line-height: 1.9;
     margin-bottom: 28px;
@@ -116,19 +128,22 @@
     color: var(--ink);
 }
 
+/* Section headings inside prose: Cormorant Garamond Bold Italic, ~20px */
 .project-prose h3 {
-    font-size: 1.6rem;
-    font-weight: 300;
-    margin-bottom: 16px;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--accent);
     margin-top: 48px;
-    color: var(--ink);
+    margin-bottom: 16px;
 }
 
 .project-sidebar {
     border-top: 1px solid var(--border);
 }
 
-/* Image grid */
+/* ── Image grid ── */
 .project-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -149,48 +164,21 @@
     height: 420px;
 }
 
-/* Nav between projects */
-.project-nav {
-    border-top: 1px solid var(--border);
-    padding-top: 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.project-nav a {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.project-nav a:hover { color: var(--ink); }
-
-.project-nav .next { flex-direction: row-reverse; }
-
-.project-nav span { font-size: 1rem; }
-
-/* Accent block */
+/* ── Callout block ── */
 .callout {
     background: var(--cream);
     border-left: 3px solid var(--accent);
     padding: 28px 36px;
     margin: 40px 0;
-    font-size: 1.15rem;
-    font-weight: 300;
-    color: var(--ink);
-    line-height: 1.7;
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
     font-style: italic;
+    color: var(--ink);
+    line-height: 1.6;
 }
 
-/* Hero video — embedded (iframe) */
+/* ── Hero video — embedded (iframe) ── */
 .project-hero-video {
     position: relative;
     width: 100%;
@@ -206,7 +194,7 @@
     height: 100%;
 }
 
-/* Local video (.mov / .mp4) */
+/* ── Local video (.mov / .mp4) ── */
 .project-video-local {
     width: 100%;
     margin-bottom: 80px;
@@ -220,14 +208,15 @@
     object-fit: contain;
 }
 
-/* Photo gallery */
+/* ── Photo gallery ── */
 .project-gallery {
     margin-bottom: 80px;
 }
 
 .gallery-label {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 400;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
@@ -264,29 +253,60 @@
     height: 420px;
 }
 
+/* ── Project nav (prev / next) ── */
+.project-nav {
+    border-top: 1px solid var(--border);
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-nav a {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-nav a:hover { color: var(--ink); }
+
+.project-nav .next { flex-direction: row-reverse; }
+
+.project-nav span { font-size: 1rem; }
+
 /* ── Responsive ── */
 @media (max-width: 900px) {
     .project-page {
         padding: 60px 32px;
     }
+
     .project-body {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+
     .project-images {
         grid-template-columns: 1fr;
     }
+
     .project-images .img-full {
         grid-column: 1;
     }
+
     .gallery-grid img {
         height: 180px;
     }
+
     .gallery-grid .img-full {
         width: 100%;
         height: 280px;
-    }
-    .project-title {
-        font-size: clamp(2.6rem, 8vw, 3.6rem);
     }
 }

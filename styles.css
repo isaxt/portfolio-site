@@ -1,3 +1,8 @@
+/* ═══════════════════════════════════════════
+   Isabella Tedesco Portfolio — styles.css
+   Single source of truth for all pages
+   ═══════════════════════════════════════════ */
+
 /* ── Reset ── */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -7,16 +12,21 @@
 
 /* ── Design Tokens ── */
 :root {
-    --bg:         #fffdfd;
-    --sidebar-bg: #fcf0f9;
-    --cream:      #f7f4ef;
-    --ink:        #1a1714;
-    --muted:      #9a9187;
-    --accent:     #9d3a72;
+    --bg:          #fffdfd;
+    --sidebar-bg:  #fcf0f9;
+    --cream:       #f7f4ef;
+    --ink:         #1a1714;
+    --muted:       #9a9187;
+    --accent:      #9d3a72;
     --accent-dark: #7d2d5a;
-    --border:     rgba(26, 23, 20, 0.12);
-    --font-mono:  'DM Mono', monospace;
-    --sidebar-w:  260px;
+    --border:      rgba(26, 23, 20, 0.12);
+
+    /* Typography */
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body:    'Fira Sans', sans-serif;
+    --font-mono:    'DM Mono', monospace;
+
+    --sidebar-w: 260px;
 }
 
 /* ── Base ── */
@@ -24,8 +34,10 @@ html, body {
     height: 100%;
     background: var(--bg);
     color: var(--ink);
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-body);
     font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 /* ── Layout ── */
@@ -35,7 +47,9 @@ html, body {
     min-height: 100vh;
 }
 
-/* ── Sidebar ── */
+/* ═══════════════════
+   SIDEBAR
+   ═══════════════════ */
 aside {
     position: sticky;
     top: 0;
@@ -45,6 +59,7 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-right: 1px solid var(--border);
 }
 
 .logo a {
@@ -52,28 +67,39 @@ aside {
     color: var(--ink);
 }
 
+/* Name: Cormorant Garamond Bold Italic, 36px */
 .logo h1 {
-    font-size: 3.8rem;
-    line-height: 0.9;
-    font-weight: 400;
+    font-family: var(--font-display);
+    font-size: 2.25rem;       /* ≈36px */
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.0;
     color: var(--accent);
+    letter-spacing: -0.01em;
 }
 
+/* Taglines under name */
 .logo p {
-    margin-top: 18px;
-    font-size: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.78rem;       /* small utility text */
+    color: var(--muted);
+    margin-top: 10px;
+    line-height: 1.4;
 }
 
 nav {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
 }
 
+/* Nav links: Cormorant Garamond, ~20px */
 nav a {
-    font-size: 1.1rem;
-    text-transform: lowercase;
+    font-family: var(--font-display);
+    font-size: 1.25rem;       /* ≈20px */
+    font-weight: 400;
+    font-style: italic;
     color: var(--muted);
     text-decoration: none;
     transition: color 0.2s;
@@ -91,7 +117,22 @@ nav a.active {
     letter-spacing: 0.05em;
 }
 
-/* ── Hero ── */
+/* ═══════════════════
+   SHARED SECTION LABELS
+   ═══════════════════ */
+.section-label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 48px;
+}
+
+/* ═══════════════════
+   HERO (index.html)
+   ═══════════════════ */
 .hero {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
@@ -105,30 +146,36 @@ nav a.active {
     max-width: 520px;
 }
 
+/* Greeting: Cormorant Garamond Bold Italic, 36px */
 .greeting {
-    font-size: 3.4rem;
+    font-family: var(--font-display);
+    font-size: 2.25rem;       /* 36px */
+    font-weight: 700;
+    font-style: italic;
     color: var(--accent);
+    line-height: 1.1;
 }
 
-.greeting em { font-style: italic; }
-
+/* Bio: Fira Sans 18px */
 .bio {
-    font-size: 1.35rem;
+    font-family: var(--font-body);
+    font-size: 1rem;          /* 18px base */
+    color: var(--muted);
     margin-top: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .cta-row {
     display: flex;
     gap: 16px;
-    margin-top: 8px;
+    margin-top: 24px;
 }
 
 /* ── Buttons ── */
 .btn {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     text-decoration: none;
     padding: 12px 24px;
@@ -155,48 +202,34 @@ nav a.active {
 
 /* ── Hero Image ── */
 .hero-image {
-    position: relative; /* ADD THIS */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
 
-.hero-image img {
-    width: 100%;
-    max-width: 480px;
-    height: auto;
-    max-height: 85vh;
-    object-fit: contain;
-}
-
 .image-wrapper {
     position: relative;
-    display: inline-block; /* shrink to image size */
+    display: inline-block;
 }
 
 .image-wrapper img {
     display: block;
     width: 100%;
-    max-width: 480px;
+    max-width: 420px;
     height: auto;
 }
 
+/* Perimeter floating icons */
 .perimeter-asset {
     position: absolute;
-
-    width: 20px;          /* ← sweet spot (try 40–60px) */
+    width: 20px;
     height: auto;
-
     transform: translate(-50%, -50%) scale(0.6);
     opacity: 0;
     pointer-events: none;
-
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
-
-    transition: 
-        opacity 0.6s ease,
-        transform 0.6s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .perimeter-asset.visible {
@@ -204,13 +237,13 @@ nav a.active {
     transform: translate(-50%, -50%) scale(0.4);
 }
 
-/* ── Scroll Indicator ── */
+/* ── Scroll Hint ── */
 .scroll-hint {
     position: fixed;
     bottom: 36px;
     left: 50%;
     transform: translateX(-50%);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: 0.55rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -237,29 +270,18 @@ nav a.active {
     100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
-/* ── Shared section styles ── */
+/* ═══════════════════
+   WORK SECTION (index.html)
+   ═══════════════════ */
 .work,
-.about,
 footer {
     border-top: 1px solid var(--border);
 }
 
-.work,
-.about {
+.work {
     padding: 100px 64px;
 }
 
-/* ── Work ── */
-.section-label {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 48px;
-}
-
-/* ── Work Categories ── */
 .work-category {
     margin-bottom: 80px;
 }
@@ -273,7 +295,19 @@ footer {
     border-top: 1px solid var(--border);
 }
 
-/* ── Projects Grid ── */
+/* Work category heading: Cormorant Garamond Bold Italic, ~20px */
+.work-category > .section-label {
+    font-family: var(--font-display);
+    font-size: 1.25rem;       /* 20px */
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--accent);
+    margin-bottom: 32px;
+}
+
+/* Projects grid */
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -286,14 +320,14 @@ a.project-card {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: 400px;
+    height: 340px;
 }
 
 .project-card::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(26, 23, 20, 0.7) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(26, 23, 20, 0.72) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.4s;
 }
@@ -303,7 +337,7 @@ a.project-card {
 .project-card img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
     transition: transform 0.6s ease;
 }
@@ -315,7 +349,7 @@ a.project-card {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 28px;
+    padding: 24px;
     z-index: 2;
     transform: translateY(8px);
     opacity: 0;
@@ -327,23 +361,31 @@ a.project-card {
     opacity: 1;
 }
 
+/* Project title: Cormorant Garamond Bold Italic, ~20px */
 .project-info h3 {
-    font-size: 1.6rem;
-    font-weight: 300;
+    font-family: var(--font-display);
+    font-size: 1.25rem;       /* 20px */
+    font-weight: 700;
+    font-style: italic;
     color: white;
     margin-bottom: 4px;
 }
 
+/* Project subtitle: Fira Sans 18px */
 .project-info p {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.65);
 }
 
-/* ── About ── */
+/* ═══════════════════
+   ABOUT SECTION (index.html inline + about.html)
+   ═══════════════════ */
 .about {
+    border-top: 1px solid var(--border);
+    padding: 100px 64px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -351,15 +393,18 @@ a.project-card {
 }
 
 .about-text h2 {
-    font-size: clamp(2rem, 3vw, 3.2rem);
-    font-weight: 300;
-    line-height: 1.2;
+    font-family: var(--font-display);
+    font-size: 2.25rem;       /* 36px */
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.15;
     margin-bottom: 28px;
+    color: var(--accent);
 }
 
 .about-text p {
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-family: var(--font-body);
+    font-size: 1rem;
     color: #5a5450;
     line-height: 1.85;
     margin-bottom: 20px;
@@ -373,9 +418,9 @@ a.project-card {
 }
 
 .skill-tag {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 6px 14px;
     border: 1px solid var(--border);
@@ -388,7 +433,7 @@ a.project-card {
 }
 
 .detail-row {
-    padding: 20px 0;
+    padding: 18px 0;
     border-bottom: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
@@ -397,8 +442,8 @@ a.project-card {
 }
 
 .detail-label {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--muted);
@@ -406,12 +451,15 @@ a.project-card {
 }
 
 .detail-value {
-    font-size: 0.95rem;
-    font-weight: 300;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
     text-align: right;
+    color: var(--ink);
 }
 
-/* ── Footer ── */
+/* ═══════════════════
+   FOOTER
+   ═══════════════════ */
 footer {
     padding: 60px 64px;
     display: flex;
@@ -425,8 +473,8 @@ footer {
 }
 
 .footer-links a {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--muted);
@@ -437,13 +485,186 @@ footer {
 .footer-links a:hover { color: var(--ink); }
 
 .footer-copy {
-    font-family: var(--font-mono);
-    font-size: 0.58rem;
-    color: var(--border);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    color: var(--muted);
     letter-spacing: 0.05em;
 }
 
-/* ── Animations ── */
+/* ═══════════════════
+   ABOUT PAGE (about.html)
+   ═══════════════════ */
+.about-page {
+    padding: 100px 64px;
+    min-height: calc(100vh - 120px);
+}
+
+.about-header {
+    margin-bottom: 72px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 48px;
+}
+
+/* About page big title: Cormorant Garamond Bold Italic, 36px */
+.about-title {
+    font-family: var(--font-display);
+    font-size: 2.25rem;       /* 36px */
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.1;
+    margin-top: 20px;
+    color: var(--ink);
+}
+
+.about-title em {
+    color: var(--accent);
+}
+
+/* Two-column body */
+.about-body {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* Prose: Fira Sans 18px */
+.about-prose p {
+    font-family: var(--font-body);
+    font-size: 1rem;          /* 18px */
+    color: #5a5450;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.about-prose p:last-child { margin-bottom: 0; }
+
+.about-prose em {
+    font-style: italic;
+    color: var(--ink);
+}
+
+.text-link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: opacity 0.2s;
+}
+
+.text-link:hover { opacity: 0.65; }
+
+.about-details {
+    border-top: 1px solid var(--border);
+}
+
+/* ═══════════════════
+   ART PAGE (art.html)
+   ═══════════════════ */
+.art-header {
+    padding: 100px 64px 60px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Art heading: Cormorant Garamond Bold Italic, 36px */
+.art-header h2 {
+    font-family: var(--font-display);
+    font-size: 2.25rem;       /* 36px */
+    font-weight: 700;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+/* Art subhead: Fira Sans 18px */
+.art-header p {
+    font-family: var(--font-body);
+    font-size: 1rem;          /* 18px */
+    color: var(--muted);
+}
+
+/* Masonry gallery */
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 20px;
+    padding: 80px 64px;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Series images displayed horizontally */
+.series {
+    display: flex;
+    gap: 10px;
+}
+
+.series img {
+    flex: 1;
+    width: 0;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Caption overlay */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .caption { opacity: 1; }
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 999;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* ═══════════════════
+   ANIMATIONS
+   ═══════════════════ */
 .fade-up {
     opacity: 0;
     transform: translateY(20px);
@@ -455,10 +676,15 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Responsive ── */
+/* ═══════════════════
+   RESPONSIVE
+   ═══════════════════ */
 @media (max-width: 1200px) {
     .projects {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .masonry-gallery {
+        column-count: 2;
     }
 }
 
@@ -473,51 +699,64 @@ footer {
         padding: 28px 32px;
         flex-direction: row;
         align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
         border-bottom: 1px solid var(--border);
+        border-right: none;
     }
+
+    .logo h1 { font-size: 1.6rem; }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        margin-top: 0;
+    }
+
+    nav a { font-size: 1rem; }
+
+    .copyright { display: none; }
 
     .hero {
         grid-template-columns: 1fr;
+        padding: 60px 32px;
+        gap: 40px;
+        min-height: auto;
     }
 
-    .hero-image {
-        padding: 0 32px 60px;
-    }
-
-    .hero-intro {
-        padding: 60px 32px 0;
-    }
+    .hero-image { padding: 0 0 20px; }
 
     .work,
     .about,
+    .about-page,
+    .art-header,
     footer {
         padding: 60px 32px;
     }
 
+    .masonry-gallery { padding: 60px 32px; }
+
     .about {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    .projects {
+    .about-body {
         grid-template-columns: 1fr;
+        gap: 48px;
     }
 
-    .work-category {
-        margin-bottom: 60px;
-    }
+    .projects { grid-template-columns: 1fr; }
 
-    .work-category + .work-category {
-        padding-top: 60px;
-    }
+    .work-category { margin-bottom: 60px; }
+    .work-category + .work-category { padding-top: 60px; }
+}
 
-    .copyright {
-        display: none;
-    }
+@media (max-width: 700px) {
+    .masonry-gallery { column-count: 1; }
 }
 
 @media (max-width: 560px) {
-    .projects {
-        grid-template-columns: 1fr;
-    }
+    .projects { grid-template-columns: 1fr; }
 }
