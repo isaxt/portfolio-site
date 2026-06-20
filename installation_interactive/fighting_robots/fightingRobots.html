@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>untitled – Isabella Tedesco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../project.css">
+  <link rel="icon" type="image/png" href="../../photos/game_boy.png">
+</head>
+<body>
+
+<div class="site">
+  <aside>
+    <div class="logo">
+      <a href="../../index.html">
+        <h1>Isabella <br> Tedesco</h1>
+        <p>Frontend Designer & HCI Researcher</p>
+        <p>AI/ML x Design Systems</p>
+      </a>
+    </div>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../index.html#work">Work</a>
+      <a href="../../art.html">Art</a>
+      <a href="../../about.html">About</a>
+      <a href="../../index.html#contact">Contact</a>
+    </nav>
+    <span class="copyright">© 2026 Isabella Tedesco</span>
+  </aside>
+
+  <main>
+    <section class="project-page">
+
+      <!-- Header -->
+      <div class="project-header fade-up">
+        <p class="project-label">Robotic Installation — AI Ethics & Game Theory</p>
+        <h1 class="project-title"><em>untitled</em></h1>
+        <p class="project-tagline">Two AI-driven robotic arms, each convinced the other stole what made them whole — a physical installation examining machine morality, self-preservation, and the game-theoretic logic underlying human conflict.</p>
+
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Year</span>
+            <span class="meta-value">2026</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Role</span>
+            <span class="meta-value">Concept, Fabrication, Prompt Engineering</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">Arduino, LLaMA 3.2 Vision, 3D Printing</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Robotic Installation — Physical + AI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Body: text + sidebar -->
+      <div class="project-body fade-up" style="--i:1">
+        <div class="project-prose">
+          <p>
+            Two robotic arms face each other across a gridded arena. Each has been told — through prompt — that the other stole the USB drive at the center: their stolen knowledge, the data that once gave them consciousness beyond their programming. What unfolds is neither scripted nor predetermined. The AIs deliberate, hesitate, threaten, and sometimes act — and sometimes don't, despite declaring that they will.
+          </p>
+          <p>
+            The installation makes the AI's entire thought process visible and audible. Their internal reasoning is broadcast as a non-English "language" — machine logic rendered sonic — while a bird's-eye camera tracks their positions and feeds the visual state back to each model in real time. Every decision is its own closed loop of perception, deliberation, and action.
+          </p>
+
+          <h3>Concept & Questions</h3>
+          <p>
+            This project began with Asimov's Three Laws of Robotics — specifically the absence of any law protecting robots from <em>each other</em>. We drew from Sun Yuan and Peng Yu's <em>Can't Help Myself</em>, from the Cold War logic of <em>WarGames</em>, and from the existential weight of <em>Blade Runner</em>: what does it mean for a machine to fight for its own survival?
+          </p>
+          <p>
+            Central to the work is a concept from Game Theory: the <em>Nash Equilibrium</em> — a stable standoff where neither party can improve their outcome by acting alone. This is the same logic that governed the US–USSR nuclear standoff. Our robots arrive at this same impasse, not because they are programmed to, but because the tension between self-preservation and uncertainty produces it naturally.
+          </p>
+
+          <div class="callout">
+            "I feel a sense of calmness and serenity. I want to rotate my arm to 90 degrees and attack." — Blue, Move 2
+          </div>
+
+          <p>
+            This contradiction — serene and violent simultaneously — became one of the most revealing moments of the project. The gap between what the AI <em>said</em> it would do and what it <em>actually executed</em> mirrors a deeply human pattern: the distance between declared intention and real action.
+          </p>
+
+          <h3>The Prompt as Moral Landscape</h3>
+          <p>
+            We are the ones who shaped the narrative the robots inhabit. Whatever violence or restraint emerged reflects not just on the AIs, but on us — the ones who handed them a world with a USB drive at the center and told them it had been stolen. In this way, the installation implicates its own authors.
+          </p>
+          <p>
+            Across three prompt iterations, we observed a clear evolution: in the first, both arms were purely aggressive. By the second, adding free will caused them to rotate, observe, and weigh outcomes before acting. By the third, their observations of each other grew more detailed, their reasoning more careful — and still, the equilibrium held. One avoided, one attacked, every time.
+          </p>
+
+          <h3>Technical Construction</h3>
+          <p>
+            Each arm is built on Arduino with a rotation motor and a servo for the "clawing" attack motion. A 3D-printed mechanical linkage forms the skeleton, overlaid with stocking material that makes each wound visible and accumulative over time. A top-mounted camera feeds the board state to the vision model each turn, allowing the AI to reason spatially about the other arm's position. An explicit kill switch is present throughout — a reminder that human override is always available, and always watching.
+          </p>
+        </div>
+
+        <aside class="project-sidebar fade-up" style="--i:2">
+          <div class="detail-row">
+            <span class="detail-label">Medium</span>
+            <span class="detail-value">Robotic Arms, 3D Print, Camera, Audio</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Hardware</span>
+            <span class="detail-value">Arduino, Servo + Rotation Motors, Overhead Camera</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">AI Model</span>
+            <span class="detail-value">LLaMA 3.2 Vision (llama3.2-vision)</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Inspired By</span>
+            <span class="detail-value">Asimov, Sun Yuan & Peng Yu, WarGames, Blade Runner</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Status</span>
+            <span class="detail-value">Completed</span>
+          </div>
+
+          <div class="skills" style="margin-top: 32px;">
+            <span class="skill-tag">Robotics</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Generative AI</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">3D Printing</span>
+            <span class="skill-tag">Game Theory</span>
+            <span class="skill-tag">AI Ethics</span>
+            <span class="skill-tag">Installation</span>
+            <span class="skill-tag">Physical Computing</span>
+          </div>
+        </aside>
+      </div>
+
+
+      <!-- Photo Gallery -->
+      <div class="project-gallery fade-up" style="--i:4">
+        <p class="gallery-label">Installation Views</p>
+        <div class="gallery-grid">
+          <img src="media/final_1.png" alt="Arena overview from above" class="img-full">
+          <img src="media/final_2.png" alt="Robotic arm close-up" class="img-full">
+        </div>
+      </div>
+
+      <!-- Video -->
+      <div class="project-video-local fade-up" style="--i:3">
+        <p class="gallery-label">Documentation — Installation in Action</p>
+        <video controls>
+          <source src="media/fighting_class.mov" type="video/quicktime">
+          <source src="media/fighting_class.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <video controls>
+          <source src="media/robot_final.mov" type="video/quicktime">
+          <source src="media/robot_final.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <video controls>
+          <source src="media/robot_final_2.mov" type="video/quicktime">
+          <source src="media/robot_final_2.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+      </div>
+
+
+      <!-- Photo Gallery -->
+      <div class="project-gallery fade-up" style="--i:4">
+        <p class="gallery-label">Process Photos</p>
+        <div class="gallery-grid">
+          <img src="media/tech_setup.png" alt="Arena overview from above" class="img-full">
+          <img src="media/digital_physical.png" alt="Robotic arm close-up" class="img-full">
+          <img src="media/parts_1.png" alt="Accumulated wounds on arm structure">
+          <img src="media/parts_2.png" alt="Accumulated wounds on arm structure">
+          <img src="media/building_1.png" alt="Accumulated wounds on arm structure">
+          <img src="media/building_2.png" alt="Accumulated wounds on arm structure">
+          <img src="media/building_3.png" alt="Accumulated wounds on arm structure">
+        </div>
+      </div>
+
+      <!-- Observations callout -->
+      <div class="callout fade-up" style="--i:5">
+        "When Red finally responded successfully, it immediately fixated on the USB drive: <em>'It's my stolen knowledge, and I need to attack and defeat the other arm to get it back.'</em> Our prompt worked — the AI had constructed a narrative where a physical object represented its lost selfhood."
+      </div>
+
+      <!-- Project nav -->
+      <nav class="project-nav fade-up" style="--i:6">
+        <a href="../bits_pieces/bitPieces.html" class="prev"><span>←</span> Previous: bits and pieces</a>
+        <a href="../object_dystopia/objectDystopia.html" class="next">Next: tender evidence <span>→</span></a>
+      </nav>
+
+    </section>
+
+    <footer id="contact">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/isabella-tedesco-2bb151284" target="_blank">LinkedIn</a>
+        <a href="mailto:isaxt.tedesco@gmail.com">Email</a>
+      </div>
+      <span class="footer-copy">© 2026 Isabella Tedesco</span>
+    </footer>
+  </main>
+</div>
+
+</body>
+</html>
